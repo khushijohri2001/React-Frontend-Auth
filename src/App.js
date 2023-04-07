@@ -9,9 +9,7 @@ import PhoneSignUp from "./components/PhoneSignUp";
 
 function App() {
   return (
-    <Container style={{ width: "400px" }}>
-      <Row>
-        <Col>
+    <div>
          
             <Routes>
               <Route
@@ -26,9 +24,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/phonesignup" element={<PhoneSignUp />} />
             </Routes>
-        </Col>
-      </Row>
-    </Container>
+            </div>
   );
 }
 

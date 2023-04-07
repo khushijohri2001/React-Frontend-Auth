@@ -5,6 +5,8 @@ import { Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../context/UserAuthContext";
+import { Container, Row, Col } from "react-bootstrap"
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -44,6 +46,9 @@ const PhoneSignUp = () => {
 
   return (
     <>
+    <Container style={{ width: "400px" }}>
+    <Row>
+      <Col>
       <div className="p-4 box">
         <h2 className="mb-3">Firebase Phone Auth</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -87,6 +92,9 @@ const PhoneSignUp = () => {
           </div>
         </Form>
       </div>
+      </Col>
+    </Row>
+  </Container>
     </>
   );
 };
